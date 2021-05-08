@@ -1,6 +1,6 @@
 ---
 title: Moving to CloudFlare
-date: 2019-10-04T03:05:00+00:00
+date: 2021-05-07T03:05:00+00:00
 informational: true
 section: issue
 
