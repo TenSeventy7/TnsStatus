@@ -1,10 +1,14 @@
 ---
-title: Testing New cState Features
-date: 2019-10-04 18:05:00
+title: Moving to CloudFlare
+date: 2019-10-04T03:05:00+00:00
 informational: true
 section: issue
+
 ---
+Started 3 hours earlier than expected, server maintenance has been finished and **all services are now back up**. All services have been moved to CloudFlare which may ensure better access to select territories, as well as faster performance.
 
-There is a new feature in cState version 4 that lets you make what are called _informational_ posts. The main difference is that there will be no _Unresolved_ or _Resolved in under a minute_ text on the pages.
+It may take a while before your ISP redirects all requests through CloudFlare but it will take less than a day.
 
-This is essentially a page with a date and title that shows up in the incident history.
+A future Fresh and Fresh Hub update will also add a secondary mirror for the update APIs, in the case of ISPs blocking websites domain-level.
+
+Again, I apologize for the inconvenience.
