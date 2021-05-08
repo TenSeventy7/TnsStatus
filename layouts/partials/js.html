@@ -104,17 +104,17 @@
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
       var time = Date.parse(element.getAttribute('title'));
-      var html = element.getAttribute('data-time-prefix') + ' ' || '';
+      var html = element.getAttribute('data-time-prefix') || '';
 
 
       if (!time) {
         time = element.innerText;
         element.setAttribute('title', time || new Date);
-        html += '{{ T "justNow" }}';
+        html += ' ' + '{{ T "justNow" }}';
       } else if (timeSince(time) < 0) {
         html = element.innerText;
       } else {
-        html += timeSince(time) + ' {{ T "someTimeAgo" }}';
+        html += ' ' + timeSince(time) + ' {{ T "someTimeAgo" }}';
       }
       html += element.getAttribute('data-time-suffix') || '';
       element.innerHTML = html.trim();
