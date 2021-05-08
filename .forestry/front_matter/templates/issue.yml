@@ -4,13 +4,53 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: datetime
   name: date
-  label: date
+  label: Date
+  default: now
+- name: resolved
+  type: boolean
+  label: Resolved
+  description: Is the issue resolved?
+- name: resolvedWhen
+  type: datetime
+  label: Resolved Date
+  description: When was the issue resolved?
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  showOnly:
+    field: resolved
+    value: true
 - type: boolean
   name: informational
-  label: informational
+  label: Informational
+  description: Is the notice informational only?
+- name: severity
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - down
+    - disrupted
+    - notice
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Severity
+  showOnly:
+    field: informational
+  description: How severe is the issue?
 - type: text
   name: section
-  label: section
+  label: Section
+  config:
+    required: false
+  default: issue
+  hidden: true
