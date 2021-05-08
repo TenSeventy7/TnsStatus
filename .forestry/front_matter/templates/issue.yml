@@ -78,3 +78,4 @@ fields:
   hidden: true
 pages:
 - content/issues/ota-services-under-emergency-maintenance.md
+- content/issues/service-maintenance.md
