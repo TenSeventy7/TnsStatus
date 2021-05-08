@@ -76,3 +76,5 @@ fields:
     required: false
   default: issue
   hidden: true
+pages:
+- content/issues/ota-services-under-emergency-maintenance.md
