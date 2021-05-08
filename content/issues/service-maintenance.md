@@ -1,6 +1,6 @@
 +++
 affected = ["Netlify", "CloudFlare", "Fresh Addon Store", "Over-the-Air (OTA) Updates", "The Fresh Website", "Website & Blog"]
-date = 2021-05-06T13:35:11Z
+date = 2021-05-07T02:00:11Z
 informational = false
 resolved = true
 resolvedWhen = 2021-05-07T03:00:00Z
