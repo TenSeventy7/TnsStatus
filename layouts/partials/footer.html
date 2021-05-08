@@ -1,0 +1,50 @@
+{{ if .Site.Params.enableCustomHTML }}
+  {{ partial "custom/above-footer" . }}
+{{ end }}
+<section class="bootstrap-wrapper footer" id="contact">
+  <div class="footer__background_shape">
+    <svg viewBox="0 0 1920 79">
+      <path d="M0 0h1920v79L0 0z" data-name="Path 1450" />
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row footer__widget">
+      <div class="col-lg-6 text-light">
+        {{ .Site.Params.description | markdownify }}
+          {{ if not .Site.Params.disableIncidentHistory }}
+            <hr class="footer-hr">
+            
+            <p class="hinted">
+              <small>
+                ⚡
+                {{ T "rss" }} —
+                {{ with $.Site.Home.OutputFormats.Get "rss" }}
+                  <a class="text-light" href="{{ .Permalink }}" class="no-underline">{{ T "toAllUpdates" }}</a>
+                {{ end }}
+                {{ if not .IsHome }}
+                {{ with .OutputFormats.Get "rss" }}
+                  {{ T "or" }} <a class="text-light" href="{{ .Permalink }}" class="no-underline">{{ T "onlyThisFeed" }} ({{ $.Title }})</a>
+                {{ end }}
+                {{ end }}
+              </small>
+            </p>
+          {{ end }}
+      </div>
+    </div>
+    <div class="row footer__footer">
+      <div class="col-lg-6">
+        <div class="footer__footer_copy text-light">
+          <p>© John Vincent - 2021<small class="footer__copyright text-light faded">{{ T "poweredBy" }} <a class="text-light" href="https://github.com/cstate/cstate"><b>cState</b></a></small></p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="footer__footer_copy text-light d-md-flex justify-content-sm-center justify-content-md-end justify-content-lg-end justify-content-xl-end justify-content-xxl-end">
+            <a class="mr-md-4" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ if .Site.Params.enableCustomHTML }}
+  {{ partial "custom/below-footer" . }}
+{{ end }}
